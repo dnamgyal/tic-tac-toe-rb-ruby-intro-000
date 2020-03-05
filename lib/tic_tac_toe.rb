@@ -6,6 +6,7 @@ def play(board)
   if !over?(board)
     turn(board)
     draw?(board)
+    over?(board)
   end
   if won?(board)
     champ = winner(board)
@@ -14,8 +15,6 @@ def play(board)
     puts "Cat's Game!"
   end
 end
-
-
 
 def turn(board)
   puts "Please enter 1-9:"
