@@ -6,6 +6,7 @@ def play(board)
   if !over?(board)
     turn(board)
     draw?(board)
+    over?(board)
   end
   if won?(board)
     champ = winner(board)
