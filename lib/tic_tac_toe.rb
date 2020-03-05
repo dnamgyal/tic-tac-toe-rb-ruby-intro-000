@@ -3,6 +3,7 @@ WIN_COMBINATIONS = [
 ]
 
 def play(board)
+
   while !over?(board)
     turn(board)
     draw?(board)
@@ -16,8 +17,9 @@ def play(board)
 end
 
 def turn(board)
+  computer = rand(1..9)
   puts "Please enter 1-9:"
-  input = gets.strip
+  input = computer
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index, "X")
@@ -115,8 +117,6 @@ def full?(board)
   end
   return board_full
 end
-
-
 
 
 def over?(board)
