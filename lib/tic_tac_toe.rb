@@ -10,6 +10,10 @@ def play(board)
   if won?(board)
     champ = winner(board)
     puts "The winner is #{champ}."
+  else
+    puts "The game was a draw"
+  end
+end
 
 
 
