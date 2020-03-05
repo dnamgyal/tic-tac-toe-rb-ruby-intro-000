@@ -5,6 +5,7 @@ WIN_COMBINATIONS = [
 def play(board)
   if !over?(board)
     turn(board)
+    draw?(board)
   end
   if won?(board)
     champ = winner(board)
