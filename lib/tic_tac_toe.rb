@@ -93,17 +93,6 @@ def won?(board)
   end
 end
 
-def full?(board)
-  board_full = true
-  board.each do |item|
-    index = board.index(item)
-    if position_taken?(board, index) == false
-      board_full = false
-    end
-  end
-  return board_full
-end
-
 def draw?(board)
   if full?(board) && !won?(board)
     return true
@@ -115,6 +104,19 @@ def draw?(board)
     return true
   end
 end
+
+def full?(board)
+  board_full = true
+  board.each do |item|
+    index = board.index(item)
+    if position_taken?(board, index) == false
+      board_full = false
+    end
+  end
+  return board_full
+end
+
+
 
 
 def over?(board)
