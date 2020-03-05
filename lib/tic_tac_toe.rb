@@ -9,7 +9,7 @@ def play(board)
   end
   if won?(board)
     champ = winner(board)
-    puts "Congratulations #{champ}!."
+    puts "Congratulations #{champ}!"
   else
     puts "Cat's Game!"
   end
